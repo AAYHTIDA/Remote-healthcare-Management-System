@@ -1,0 +1,13 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>Telemedicine Consultations</h2>
+<a href="{% url 'telemedicine_create' %}">Add New Consultation</a>
+<ul>
+    {% for record in telemedicine_records %}
+    <li>
+        <a href="{% url 'telemedicine_detail' record.id %}">{{ record.patient }} - {{ record.consultation_date }}</a>
+    </li>
+    {% endfor %}
+</ul>
+{% endblock %}

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>{% block title %}My Healthcare Management System{% endblock %}</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css' %}">
+</head>
+
+<body>
+    <header>
+        <h1>My Healthcare Management System</h1>
+    </header>
+    <nav>
+        <ul>
+            <li><a href="{% url 'staff_list' %}">Staff</a></li>
+            <li><a href="{% url 'patients_list' %}">Patients</a></li>
+            <li><a href="{% url 'appointments_list' %}">Appointments</a></li>
+            <li><a href="{% url 'telemedicine_list' %}">Telemedicine</a></li>
+        </ul>
+    </nav>
+    <main>
+        {% block content %}
+        {% endblock %}
+    </main>
+    <footer>
+        <p>&copy; 2024 My Healthcare Management System</p>
+    </footer>
+</body>
+
+</html>

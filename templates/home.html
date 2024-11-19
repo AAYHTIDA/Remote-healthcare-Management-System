@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Remote Healthcare Management System</title>
+    {% load static %}
+    <link rel="stylesheet" type="text/css" href="{% static 'css/styles.css' %}">
+</head>
+
+<body>
+    <div class="container">
+        <h1>Welcome to the Remote Healthcare Management System</h1>
+        <nav>
+            <ul>
+                <li><a href="{% url 'patient_list' %}">Patients</a></li>
+                <li><a href="{% url 'appointment_list' %}">Appointments</a></li>
+                <li><a href="{% url 'base_staff' %}">Staff</a></li>
+                <li><a href="{% url 'telemedicine_sessions' %}">Telemedicine</a></li>
+            </ul>
+        </nav>
+        <!-- Add your content here -->
+    </div>
+    <footer>
+        <p>&copy; 2024 Remote Healthcare Management System</p>
+    </footer>
+</body>
+
+</html>

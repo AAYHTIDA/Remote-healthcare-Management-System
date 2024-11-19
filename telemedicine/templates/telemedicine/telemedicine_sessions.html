@@ -1,0 +1,22 @@
+{% load static %}
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Telemedicine Sessions</title>
+</head>
+
+<body>
+    <h1>Telemedicine Sessions</h1>
+    <ul>
+        {% for session in sessions %}
+        <li>
+            <a href="{% url 'telemedicine_session_detail' session.pk %}">
+                Session with {{ session.doctor }} on {{ session.date }} at {{ session.time }}
+            </a>
+        </li>
+        {% endfor %}
+    </ul>
+</body>
+
+</html>
